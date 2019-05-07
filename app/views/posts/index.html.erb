@@ -1,6 +1,8 @@
-<h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
-<% @images.map do |title_and_link|  %>
-  <p><%= title_and_link[:title] %></p>
-  <img src= "<%= title_and_link[:url] %>" height="100">
-  <br>
-<% end %>
+<div class="container text-center">
+  <h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
+  <% @images.map do |title_and_link|  %>
+    <p><%= title_and_link[:title] %></p>
+    <img src= "<%= title_and_link[:url] %>" height="100">
+    <br>
+  <% end %>
+</div>
