@@ -1,15 +1,19 @@
-<div class="container">
+<div class="container bg-light">
   <h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
+</div>
+<div class="container">
     <% @images.map do |title_and_link|  %>
-    <div class="row">
+    <div class="row border mb-2 rounded bg-light">
     <div class="col-2">
-      <img src= "<%= title_and_link[:url] %>" height="100">
+      <div class="text-center">
+        <img src= "<%= title_and_link[:url] %>" width="100">
+      </div>
     </div>
-    <div class="col"
+    <div class="col align-self-center"
       <p><%= title_and_link[:title] %></p>
     </div>
 
     </div>
     <% end %>
-    </div>
+</div>
 </div>
