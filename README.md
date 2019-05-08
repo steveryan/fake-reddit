@@ -4,4 +4,4 @@ This is fake reddit. Go to /r/whatever_subreddit to view the titles and thumbnai
 To Do
 - [x] localhost/r/cats should display the post titles and pictures from r/cats
 - [x] transform reddit API response into domain specific data structure
-- [ ] style with bootstrap
+- [x] style with bootstrap
