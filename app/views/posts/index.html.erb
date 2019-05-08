@@ -3,7 +3,7 @@
 </div>
 <div class="container">
     <% @images.map do |title_and_link|  %>
-    <div class="row border mb-2 rounded bg-light">
+    <div class="row border mb-2 rounded bg-light shadow-sm">
     <div class="col-2">
       <div class="text-center">
         <img src= "<%= title_and_link[:url] %>" width="100">
