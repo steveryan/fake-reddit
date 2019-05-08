@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+=begin
   def index
     @subreddit_name = params[:subreddit_id]
     @posts_array = get_title_and_images
@@ -23,5 +24,5 @@ class PostsController < ApplicationController
   def get_title_and_images
     create_useful_data_structure(make_request)
   end
-
+=end
 end

@@ -1,2 +1,22 @@
-<h1>Welcome to the <%= @subreddit_name %> subreddit!</h1>
-<p>Find me in app/views/subreddits/show.html.erb</p>
+<div class="container bg-light">
+  <h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
+</div>
+<div class="container">
+  <% @posts_array.map do |post|  %>
+  <div class="container border mb-2 rounded bg-light shadow-sm">
+    <div class="row">
+      <p>Posted by <%= post[:author] %></p>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <div class="text-center">
+          <img src= "<%= post[:url] %>" width="100">
+        </div>
+      </div>
+      <div class="col align-self-center"
+        <p><%= post[:title] %></p>
+      </div>
+    </div>
+  </div>
+    <% end %>
+</div>
