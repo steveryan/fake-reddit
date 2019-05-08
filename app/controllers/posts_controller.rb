@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @subreddit_name = params[:subreddit_id]
-    @images = get_title_and_images
+    @posts_array = get_title_and_images
   end
 
   def make_request
@@ -11,13 +11,13 @@ class PostsController < ApplicationController
   end
 
   def create_useful_data_structure(posts)
-    title_and_links = []
+    useful_data = []
     posts.each do |json|
       if json["data"]["url"].include?(".jpg")
-        title_and_links << {title: json["data"]["title"], url: json["data"]["url"]}
+        useful_data << {title: json["data"]["title"], url: json["data"]["url"], author: json["data"]["author"]}
       end
     end
-    title_and_links
+    useful_data
   end
 
   def get_title_and_images

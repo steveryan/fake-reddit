@@ -2,7 +2,7 @@
   <h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
 </div>
 <div class="container">
-    <% @images.map do |title_and_link|  %>
+    <% @posts_array.map do |title_and_link|  %>
     <div class="row border mb-2 rounded bg-light shadow-sm">
     <div class="col-2">
       <div class="text-center">
