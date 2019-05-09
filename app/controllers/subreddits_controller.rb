@@ -17,7 +17,7 @@ class SubredditsController < ApplicationController
     useful_data = []
     posts.each do |json|
       if json["data"]["url"].include?(".jpg")
-        useful_data << {title: json["data"]["title"], url: json["data"]["url"], author: json["data"]["author"]}
+        useful_data << {title: json["data"]["title"], url: json["data"]["url"], author: json["data"]["author"], post: json["data"]["id"]}
       end
     end
     useful_data

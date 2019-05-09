@@ -8,13 +8,13 @@
       <p>Posted by <a href="/u/<%= post[:author] %>">/u/<%= post[:author] %></a></p>
     </div>
     <div class="row">
-      <div class="col-2">
+      <div class="col-2 mb-2">
         <div class="text-center">
           <img src= "<%= post[:url] %>" width="100">
         </div>
       </div>
       <div class="col align-self-center"
-        <p><%= post[:title] %></p>
+        <p><a href="/r/<%= @subreddit_name+"/comments/"+post[:post] %>"><%= post[:title] %></a></p>
       </div>
     </div>
   </div>

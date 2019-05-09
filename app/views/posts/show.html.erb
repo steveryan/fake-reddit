@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="container border mb-2 rounded bg-light shadow-sm">
+    <div class="row">
+      <p>Posted by <a href="/u/<%= @original_post[:author] %>">/u/<%= @original_post[:author] %></a> in </p>
+    </div>
+    <div class="row">
+      <div class="col-2 mb-2">
+        <div class="text-center">
+          <img src= "<%= @original_post[:url] %>" width="100">
+        </div>
+      </div>
+      <div class="col align-self-center"
+        <p><%= @original_post[:title] %></p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <% @comments_array.map do |comment|  %>
+  <div class="container border mb-2 rounded bg-light shadow-sm">
+    <div class="row">
+      <p>Comment by <a href="/u/<%= comment[:author] %>">/u/<%= comment[:author] %></a></p>
+    </div>
+    <div class="row">
+        <p><%= comment[:body] %></p>
+    </div>
+  </div>
+    <% end %>
+</div>
