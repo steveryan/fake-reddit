@@ -7,5 +7,5 @@ To Do
 - [x] style with bootstrap
 - [x] Add Users
 - [x] Make Users posts page
-- [ ] Add Comments
+- [x] Add Comments
 - [ ] Make Users comments page
