@@ -6,6 +6,6 @@ To Do
 - [x] transform reddit API response into domain specific data structure
 - [x] style with bootstrap
 - [x] Add Users
-- [ ] Make Users posts page
+- [x] Make Users posts page
 - [ ] Add Comments
 - [ ] Make Users comments page

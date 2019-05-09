@@ -1,11 +1,11 @@
 <div class="container bg-light">
-  <h1>Here are the posts in the <%= @subreddit_name %> subreddit</h1>
+  <h1>Here are the posts that <%= @user_name %> has created</h1>
 </div>
 <div class="container">
   <% @posts_array.map do |post|  %>
   <div class="container border mb-2 rounded bg-light shadow-sm">
     <div class="row">
-      <p>Posted by <a href="/u/<%= post[:author] %>">/u/<%= post[:author] %></a></p>
+      <p>Posted in <a href="/r/<%= post[:subreddit] %>">/r/<%= post[:subreddit] %></a></p>
     </div>
     <div class="row">
       <div class="col-2">
