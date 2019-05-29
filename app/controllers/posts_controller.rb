@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, only: :show
+
   def show
     @subreddit_name = params[:subreddit_id]
     @post_id = params[:id]

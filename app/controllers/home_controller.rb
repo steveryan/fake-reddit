@@ -1,6 +1,11 @@
 class HomeController < ApplicationController
+
   def show
-    @current_user = "steve"
+    if user_signed_in?
+      @current_user = current_user.email
+    else
+      @current_user = "YOU ARE NOT SIGNED IN"
+    end
   end
 
 end
