@@ -1,2 +1,6 @@
 <h1>Welcome to Reddit</h1>
-<p>Hi <%= @current_user %></p>
+<% if user_signed_in? %>
+  <p>Hi <%= current_user.email %></p>
+<% else %>
+  <p>Reddit is better when you have an account. <a href="/users/sign_up"> Create one </a></p>
+<% end %>
