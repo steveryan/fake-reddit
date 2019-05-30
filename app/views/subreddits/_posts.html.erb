@@ -1,0 +1,28 @@
+<div class="container">
+  <% @posts_array.map do |post|  %>
+  <div class="container border mb-2 rounded bg-light shadow-sm">
+    <div class="row p-2">
+      <p>Posted by <a href="/u/<%= post[:author] %>">/u/<%= post[:author] %></a></p>
+    </div>
+    <div class="row px-2">
+      <div class="col-2 mb-2">
+        <div class="text-center">
+          <img src= "<%= post[:url] %>" width="100" data-toggle="modal" data-target="#<%= post[:post] %>">
+        </div>
+      </div>
+      <div class="col align-self-center"
+        <p><a href="/r/<%= @subreddit_name+"/comments/"+post[:post] %>"><%= post[:title] %></a></p>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="<%= post[:post] %>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src= "<%= post[:url] %>" class="w-100">
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+</div>
